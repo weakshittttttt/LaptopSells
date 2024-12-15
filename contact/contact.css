@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    display: grid;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.home-container{
+
+
+    height: 500px;
+
+}
+
+.head{
+    background-color: #2e3047;
+    color: #3bba9c;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 2px rgb(131, 129, 129);
+}
+li::marker{
+    color: white;
+}
+.link{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+    position: absolute;
+    top: 55px;
+    right: 25px;
+
+}
+
+#home,#shop,#project,#contact{
+    transform: translateY(0);
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+#home:hover, #shop:hover, #project:hover, #contact:hover {
+    transform: translateY(-10px);
+    transition: transform 0.5s ease, color 0.5s ease; /* Combine transition properties */
+    color: rgb(211, 208, 208);
+}
+
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #3bba9c;
+}
+
+
+.main{
+    background-color: #3c3f58;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    background-color: #2e3047;
+    color: #3bba9c;
+    width: 1000px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
+.contact input{
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #2e3047;
+    height: 30px;
+    border-radius: 2px;
+    text-decoration: underline;
+    transition: all ease .5s;
+    color: #3bba9c;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+.contact input:focus{
+    transition: all ease .5s;
+    border-color: #3bba9c;
+    outline: none;
+    color: #3bba9c;
+
+}
+
+
+.contact .firstN,.secondN,.email{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.email{
+    width: 5fr;
+}
+
+.message{
+    display: flex;
+    grid-row: 3 / 5;
+    grid-column: 1 / 3;
+    flex-direction: column;
+    align-items: center;
+
+}
+.message h3{
+    margin: 0;
+}
+
+.message input{
+    background-color: #3c3f58;
+    width: 870px;
+    height: 140px;
+    border-radius: 10px;
+}
+
+.submit{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.submit button{
+    background-color: #2e3047;
+    color: #3bba9c;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 20px;
+    transform: translateY(0);
+    transition: ease 0.5s;
+    height: 40px;
+}
+
+.submit button:hover{
+    background-color: #3bba9c;
+    color: #2e3047;
+    transform: translateY(-10px);
+}

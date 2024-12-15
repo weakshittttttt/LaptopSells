@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acer Aspire 1</title>
+    <link rel="icon" href="/logo.jpg" type="image/icon type">
+    <style>
+        body{
+    margin: 0;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.head{
+    background-color: #2e3047;
+    color: #3bba9c;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+li::marker{
+    color: white;
+}
+.link{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+    position: absolute;
+    top: 55px;
+    right: 25px;
+
+}
+
+#home,#shop,#about,#contact{
+    transform: translateY(0);
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+#home:hover, #shop:hover, #about:hover, #contact:hover {
+    transform: translateY(-10px);
+    transition: transform 0.5s ease, color 0.5s ease; /* Combine transition properties */
+    color: rgb(211, 208, 208);
+}
+
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #3bba9c;
+}
+
+.main{
+    background-color: #3c3f58;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.content{
+    width: 1000px;
+    height: 650px;
+    background-color: #43455c;
+    border-radius: 10px;
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px 80px 80px 80px 80px 80px;
+    align-items: center;
+    color: #3bba9c;
+    align-items: center;
+}
+
+.product-name{
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    text-align: center;
+}
+.product-img{
+    grid-row: 2 / 7;
+    grid-column: 1 / 3;
+}
+
+.product-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.price{
+    grid-row: 7 / 8;
+    grid-column: 3 / 4;
+    margin-left: 20px;
+    color: honeydew;
+    font-size: 2rem;
+}
+.spec{
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    margin-left: 20px;
+    display: flex;
+}
+.spec h2{
+    margin-bottom: 0;
+}
+.product-spec{
+    grid-row: 2 / 7;
+    grid-column: 3 / 5;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    
+}
+.product-spec p {
+    margin: 5px;
+
+}
+
+.product-spec ul{
+    margin: 0;
+}
+.buttons{
+    grid-row: 8 / 9;
+    grid-column: 3 / 5;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button{
+    background-color: #2e3047;
+    color: #3bba9c;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 20px;
+    transform: translateY(0);
+    transition: ease 0.5s;
+}
+
+.buttons button:hover{
+    background-color: #3bba9c;
+    color: #2e3047;
+    transform: translateY(-10px);
+
+}
+    </style>
+</head>
+<body>
+    <div class="head">
+        <header>
+        <h1><ul style="list-style: square;"><li>Lopez Laptop Center</li></ul></h1>
+
+        <div class="link">
+        <a href="/index.html" id="home">Home</a>
+        <a href="/shop/shop.html" id="shop">Shop</a>
+        <a href="/about/about.html" id="about">About us</a>
+        <a href="/contact/contact.html" id="contact">Contact us</a>
+        </div>  
+        </header>
+    </div>
+
+    <div class="main">
+        <div class="content">
+            <div class="product-name"><h1>Acer Aspire 1</h1></div>
+            <div class="product-img"><img src="/shop/acerlow.png" alt=""></div>
+            <div class="spec"><h2>Specifications</h2></div>
+            <div class="product-spec">
+                <p><b>Processor:</b> Intel Celeron N4020 (Dual-core, up to 2.8 GHz).</p>
+                <p><b>Graphics Adapter:</b> Intel UHD Graphics 600.</p>
+                <p><b>Memory:</b> 4GB DDR4 RAM.</p>
+                <p><b>Display:</b> 15.6" Full HD (1920x1080) with an LED-backlit TFT LCD screen.</p>
+                <p><b>Connectivity:</b> 
+                    <ul>
+                        <li>802.11ac Wi-Fi, Bluetooth 4.2</li>
+                        <li>USB 3.10 2x, USB 2.0 2x</li>
+                        <li>HDMI 2.0</li>
+                        <li>RJ-45 LAN port</li>
+                    </ul>
+                <p><b>Storage:</b> 128GB eMMC (expandable via SD card or external storage).</p>
+                <p><b>Weight:</b> 1.65 kg</p>
+            </div>
+            <div class="price"><h1>₱8,000</h1></div>
+            <div class="buttons">
+                <button id="buy">Buy now</button>
+                <button id="add">Add to Cart</button>
+                <div id="addressModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 5px; background: #2e3047; z-index: 1000;">
+                    <h3 style="margin-bottom: 15px;">Fill up your Information</h3>
+                    <div style="margin-bottom: 10px;">
+                      <label for="name" style="display: block; margin-bottom: 5px;">Name:</label>
+                      <input type="text" placeholder="Enter your name" style="width: 100%; padding: 5px;">
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                      <label for="contact" style="display: block; margin-bottom: 5px;">Contact:</label>
+                      <input type="number" placeholder="Enter your number" style="width: 100%; padding: 5px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                      <label for="address" style="display: block; margin-bottom: 5px;">Address:</label>
+                      <input type="text" id="address" placeholder="Enter your address" style="width: 100%; padding: 5px;">
+                    </div>
+                    <button id="submitAddress" style="margin-right: 10px; padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer;">Submit</button>
+                    <button id="closeModal" style="padding: 5px 10px; background-color: #f44336; color: white; border: none; border-radius: 3px; cursor: pointer;">Cancel</button>
+                </div>
+
+            </div>
+
+            <div id="cartModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 5px; background: #2e3047; z-index: 1000;">
+                <h3>Item Added to Cart!</h3>
+                <button id="exit" style="position: relative; left: 37%; margin-right: 10px; padding: 5px 10px; background-color: #4CAF50; color: white; border: none; border-radius: 3px; cursor: pointer;">OK</button>
+
+            </div>
+
+                <div id="modalBackdrop" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+
+
+        </div>
+    </div>
+
+    <script>
+        const buyNowButton = document.getElementById("buy");
+        const addressModal = document.getElementById("addressModal");
+        const modalBackdrop = document.getElementById("modalBackdrop");
+        const closeModal = document.getElementById("closeModal");
+        const submitAddress = document.getElementById("submitAddress");
+        const addCart = document.getElementById("add");
+        const cartModal = document.getElementById("cartModal");
+        const exit = document.getElementById("exit");
+
+                // Show the modal when "Buy Now" is clicked
+        buyNowButton.addEventListener("click", () => {
+        addressModal.style.display = "block";
+        modalBackdrop.style.display = "block";
+        });
+
+        // Close the modal when "Cancel" is clicked
+        closeModal.addEventListener("click", () => {
+        addressModal.style.display = "none";
+        modalBackdrop.style.display = "none";
+        });
+
+        // Close the modal when the backdrop is clicked
+        modalBackdrop.addEventListener("click", () => {
+        addressModal.style.display = "none";
+        modalBackdrop.style.display = "none";
+        });
+
+        // Handle the "Submit" button functionality
+        submitAddress.addEventListener("click", () => {
+        const addressInput = document.getElementById("address").value;
+        if (addressInput.trim() === "") {
+            alert("Please fill in your address.");
+        } else {
+            alert(`Item Purchased`);
+            addressModal.style.display = "none";
+            modalBackdrop.style.display = "none";
+            location.reload(); // Reload the page
+        }
+        });
+
+        add.addEventListener("click", () => {
+            cartModal.style.display = "block";
+            modalBackdrop.style.display = "block";
+        });
+
+        modalBackdrop.addEventListener("click", () => {
+            cartModal.style.display = "none";
+            modalBackdrop.style.display = "none";
+        });
+        
+        exit.addEventListener("click", () => {
+            cartModal.style.display = "none";
+            modalBackdrop.style.display = "none";
+            location.reload();
+        });
+        
+
+    </script>
+</body>
+</html>

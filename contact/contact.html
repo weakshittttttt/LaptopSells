@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="/logo.jpg" type="image/icon type">
+</head>
+<body>
+    <div class="head">
+        <header>
+        <h1><ul style="list-style: square;"><li>Lopez Laptop Center</li></ul></h1>
+
+        <div class="link">
+        <a href="/index.html" id="home">Home</a>
+        <a href="/shop/shop.html" id="shop">Shop</a>
+        <a href="/about/about.html" id="about">About us</a>
+        <a href="/contact/contact.html" id="contact">Contact us</a>
+        </div>  
+        </header>
+    </div>
+
+    <div class="main">
+        <div class="contact">
+            <div class="firstN"><h3>First Name</h3><input type="text"></div>
+            <div class="secondN"><h3>Last Name</h3><input type="text"></div>
+            <div class="email"><h3>Email</h3><input type="email"></div>
+            <div class="message"><h3>Message</h3><input type="text"></div>
+            <div class="submit" id="click"><button>Submit</button></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('click').onclick = function(){
+            alert("Message submitted")
+            location.reload();
+        };
+    </script>
+</body>
+</html>
